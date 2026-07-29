@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VidMG Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0b0f14;
+      --text: #e8eef5;
+      --muted: #9aa8b8;
+      --accent: #e11d48;
+      --card: #151b24;
+      --border: #2a3544;
+      --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f7f9fc;
+        --text: #142033;
+        --muted: #5b6b7c;
+        --card: #ffffff;
+        --border: #d7dee8;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    h1 { font-size: 2rem; letter-spacing: -0.03em; margin: 0 0 8px; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; letter-spacing: -0.02em; }
+    p, li { color: var(--text); }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 1rem 0;
+    }
+    a { color: var(--accent); }
+    ul { padding-left: 1.2rem; }
+    code {
+      font-size: 0.9em;
+      padding: 0.1em 0.35em;
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--border) 55%, transparent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>VidMG Privacy Policy</h1>
+    <p class="meta">
+      Effective date: July 29, 2026<br />
+      Product: <strong>VidMG — Drive Screen Recorder</strong> (Chrome extension)<br />
+      Contact: <em>rahulverma212131@gmail.com</em>
+    </p>
+
+    <div class="card">
+      <strong>Short version:</strong> VidMG records screen/camera/mic on your device and saves videos to <em>your</em> Google Drive. We do not operate a VidMG cloud that stores your recordings, passwords, or Google access tokens.
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>
+      VidMG is a Chrome extension that helps you record short screen videos (similar to Loom-style messaging) and store them in a folder on your own Google Drive account (“VidMG Recordings”).
+    </p>
+
+    <h2>2. Data we access</h2>
+    <p>Depending on features you use, VidMG may access:</p>
+    <ul>
+      <li><strong>Google account basic profile</strong> — name, email address, and profile picture (to show who is signed in).</li>
+      <li><strong>Google Drive files created by VidMG</strong> — create, list, rename, delete, upload, and manage sharing for recordings stored in the VidMG Recordings folder. Scope used: <code>drive.file</code> (not full Drive access).</li>
+      <li><strong>Screen, window, tab, camera, and/or microphone media</strong> — only while you start a recording and only after Chrome’s permission prompts.</li>
+      <li><strong>Local extension storage</strong> — sign-in state, cached profile display info, and the Drive folder id for VidMG Recordings.</li>
+    </ul>
+
+    <h2>3. How we use data</h2>
+    <ul>
+      <li>Authenticate you with Google via Chrome’s identity API.</li>
+      <li>Upload and manage your recordings in your Google Drive.</li>
+      <li>Let you share recordings (private, anyone-with-link, or invite by email) using Google Drive permissions that you choose.</li>
+      <li>Show your name/avatar in the extension UI.</li>
+    </ul>
+    <p>We do <strong>not</strong> sell personal data. We do <strong>not</strong> use your Drive content or recordings for advertising. We do <strong>not</strong> use them to train third-party AI models.</p>
+
+    <h2>4. Where data is stored</h2>
+    <ul>
+      <li><strong>Recordings:</strong> on your Google Drive (Google’s infrastructure under your Google account).</li>
+      <li><strong>Pending upload blobs:</strong> temporarily in on-device IndexedDB until upload finishes, then removed.</li>
+      <li><strong>OAuth access tokens:</strong> held by Chrome’s identity system / the extension service worker on your device; not sent to a VidMG server.</li>
+      <li><strong>VidMG servers:</strong> none for this product. There is no VidMG backend that receives your videos.</li>
+    </ul>
+
+    <h2>5. Sharing</h2>
+    <p>
+      By default, new recordings are private to your Google account. If you use Share:
+    </p>
+    <ul>
+      <li><strong>Anyone with the link</strong> makes the file viewable by anyone who has the URL.</li>
+      <li><strong>Invite by email</strong> grants access to specific Google accounts you enter.</li>
+    </ul>
+    <p>Those sharing actions are performed through Google Drive at your direction.</p>
+
+    <h2>6. Limited Use disclosure (Chrome Web Store / Google API)</h2>
+    <div class="card">
+      VidMG’s use of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+      including the Limited Use requirements. VidMG uses Google user data only to provide or improve user-facing features that are prominent in the extension (recording, Drive storage, library management, and sharing you initiate). Data is not transferred to unrelated third parties for advertising, and is not sold.
+    </div>
+
+    <h2>7. Permissions explained</h2>
+    <ul>
+      <li><code>identity</code> — Google sign-in.</li>
+      <li><code>storage</code> — local preferences / profile cache / folder id.</li>
+      <li><code>tabs</code> / <code>windows</code> — open the recorder and library pages.</li>
+      <li>Host access to <code>googleapis.com</code> and <code>accounts.google.com</code> — Drive and auth only.</li>
+    </ul>
+
+    <h2>8. Data retention &amp; deletion</h2>
+    <ul>
+      <li>Delete recordings anytime in the VidMG library or in Google Drive.</li>
+      <li>Sign out in the extension to clear cached profile/folder state and revoke the cached Google token when possible.</li>
+      <li>Uninstalling the extension removes local extension storage on that browser profile. Your Drive files remain until you delete them in Drive.</li>
+    </ul>
+
+    <h2>9. Children’s privacy</h2>
+    <p>VidMG is not directed to children under 13, and we do not knowingly collect data from children.</p>
+
+    <h2>10. Changes</h2>
+    <p>We may update this policy. The “Effective date” above will change when we do. Continued use after updates means you accept the revised policy.</p>
+
+    <h2>11. Contact</h2>
+    <p>
+      Questions about privacy: <em>rahulverma212131@gmail.com</em><br />
+      Chrome Web Store listing: <em>REPLACE_WITH_STORE_URL_WHEN_PUBLISHED</em>
+    </p>
+  </main>
+</body>
+</html>
